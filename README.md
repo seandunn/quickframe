@@ -34,3 +34,5 @@ The main classes provided by quickframe are .grid and .wire.
     <footer class="wire Layout__footer">footer</footer>
   </article>
 ```
+
+![An example of a quickframe](./demo.png)
