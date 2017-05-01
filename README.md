@@ -36,3 +36,33 @@ The main classes provided by quickframe are .grid and .wire.
 ```
 
 ![An example of a quickframe](./demo.png)
+
+
+## Install
+
+Simply copy the index.css to your local web server and link to the
+stylesheet from HTML.
+
+Alternatively install as dev dependency using npm.
+
+*Currently this is work in progress and not yet published to npm.*
+
+Until it's published it can be tested by cloning the repo and using npm
+link locally:-
+
+```sh
+git clone git@github.com:seandunn/quickframe.git
+
+cd quickframe; npm link
+
+cd /path/to/your/test/project; npm link quickframe
+```
+
+and link to HTML using your preferred method.
+
+e.g. If using webpack for CSS ala create-react-app
+
+
+```jsx
+  import 'quickframe/index.css';
+```

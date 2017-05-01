@@ -1,6 +1,6 @@
 {
   "name": "quickframe",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "A set of pure CSS classes for throw away wireframing",
   "main": "index.css",
   "scripts": {
