@@ -1,0 +1,181 @@
+/* Extract to npm package */
+@import url(//fonts.googleapis.com/css?family=Indie+Flower);
+
+body {
+	background-color: #434343;
+	background-image:linear-gradient(#434343, #282828);
+}
+
+.grid {
+	background-color: transparent;
+
+	background-image:
+		linear-gradient(
+			0deg,
+			transparent 24%,
+			rgba(255, 255, 255, .05) 25%,
+			rgba(255, 255, 255, .05) 26%,
+			transparent 27%,
+			transparent 74%,
+			rgba(255, 255, 255, .05) 75%,
+			rgba(255, 255, 255, .05) 76%,
+			transparent 77%,
+			transparent
+		),
+
+		linear-gradient(
+			90deg,
+			transparent 24%,
+			rgba(255, 255, 255, .05) 25%,
+			rgba(255, 255, 255, .05) 26%,
+			transparent 27%,
+			transparent 74%,
+			rgba(255, 255, 255, .05) 75%,
+			rgba(255, 255, 255, .05) 76%,
+			transparent 77%,
+			transparent
+		);
+
+		height:100%;
+		background-size:50px 50px;
+}
+
+.grid:empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.grid:empty::after {
+  content: "Empty Grid";
+  color: white;
+  font-family: 'Indie Flower';
+  font-size: 5rem;
+}
+
+.wire {
+  color: white;
+  background: repeating-linear-gradient(
+    30deg,
+    rgba(96, 109, 188, 0.3),
+    rgba(96, 109, 188, 0.3) 10px,
+    rgba(70,  82, 152, 0.3) 10px,
+    rgba(70,  82, 152, 0.3) 20px
+  );
+
+  border-radius: 155px 5px 125px 5px/5px 125px 5px 155px;
+
+  border: 5px solid rgba(255, 255, 255, 0.3);
+
+  padding: auto 0;
+  font-family: 'Indie Flower';
+  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.wire input,
+.wire button,
+.wire select {
+  padding:0.5rem 0.5rem;
+  margin:0 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  background: transparent;
+  color: white;
+  border:solid 3px white;
+}
+
+.wire [type="checkbox"]:not(:checked),
+.wire [type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+.wire [type="checkbox"]:not(:checked) + label,
+.wire [type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 0.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+.wire [type="checkbox"]:not(:checked) + label:before,
+.wire [type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0.2em;
+  width: 0.75em; height: 0.75em;
+  border:solid 3px white;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+.wire [type="checkbox"]:not(:checked) + label:after,
+.wire [type="checkbox"]:checked + label:after {
+  content: '✔';
+  position: absolute;
+  top: 1em; left: 0.5em;
+  font-size: 0.5em;
+  line-height: 0.8;
+  transition: all .2s;
+}
+/* checked mark aspect changes */
+.wire [type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+.wire [type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.wire [type="checkbox"]:disabled:not(:checked) + label:before,
+.wire [type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+}
+.wire [type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+.wire [type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+
+.wire button,
+.wire input[type="submit"] {
+  letter-spacing: 0.3rem;
+  border:solid 7px white;
+}
+
+.wire img {
+	background-image:
+		linear-gradient(
+			30deg,
+			transparent 48%,
+			rgba(255, 255, 255, 1) 49%,
+			rgba(255, 255, 255, 1) 50%,
+			transparent 51%,
+			transparent
+		),
+
+		linear-gradient(
+			-30deg,
+			transparent 48%,
+			rgba(255, 255, 255, 1) 49%,
+			rgba(255, 255, 255, 1) 50%,
+			transparent 51%,
+			transparent
+		);
+
+  border: 3px solid white;
+  border-radius: 235px 4px 225px 5px/8px 225px 6px 255px;
+  margin: 1em;
+  min-height: 3em;
+  min-width: 3em;
+}
+
+/* End --- Extract to npm package */
+
